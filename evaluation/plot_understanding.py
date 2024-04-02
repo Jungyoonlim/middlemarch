@@ -8,7 +8,7 @@ def load_corpus(file_path):
 
 def evaluate(corpus):
     nlp = spacy.load('en_core_web_sm')
-    nlp.max_length = 2000000  # Increase the max_length limit
+    nlp.max_length = 2000000  
     plot_events = []
     for doc in corpus:
         events = extract_plot_events(doc, nlp)
